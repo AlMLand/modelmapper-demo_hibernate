@@ -33,8 +33,8 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = false)
 @RequiredArgsConstructor
 @Audited
-@AuditOverride(forClass = AuditableEntity.class) // pozvoljaet vzjat dannie iz superklassa 
 @EntityListeners(AuditingEntityListener.class)
+@AuditOverride(forClass = AuditableEntity.class)
 @Entity
 @Table(name = "singer")
 public class SingerEntity extends AuditableEntity<SingerEntity>{
