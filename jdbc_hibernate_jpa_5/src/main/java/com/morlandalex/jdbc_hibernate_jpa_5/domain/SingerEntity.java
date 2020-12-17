@@ -22,9 +22,13 @@ import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
+@Getter
+@Setter
 @ToString(exclude = {"version","albumEntities","instrumentEntities"})
 @EqualsAndHashCode(callSuper = false)
 @RequiredArgsConstructor
@@ -61,67 +65,5 @@ public class SingerEntity extends AuditableEntity<SingerEntity>{
 			joinColumns = @JoinColumn(name = "singer_id"), 
 			inverseJoinColumns = @JoinColumn(name = "instrument_id"))		
 	private Set<InstrumentEntity> instrumentEntities;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public LocalDate getBirthDate() {
-		return birthDate;
-	}
-
-	public void setBirthDate(LocalDate birthDate) {
-		this.birthDate = birthDate;
-	}
-
-	public int getVersion() {
-		return version;
-	}
-
-	public void setVersion(int version) {
-		this.version = version;
-	}
-
-	public Set<AlbumEntity> getAlbumEntities() {
-		return albumEntities;
-	}
-
-	public void setAlbumEntities(Set<AlbumEntity> albumEntities) {
-		albumEntities.forEach(albumEntity -> albumEntity.setSingerEntity(this));
-		this.albumEntities = albumEntities;
-	}
-
-	public boolean addAlbumEntities(AlbumEntity albumEntity) {
-		albumEntity.setSingerEntity(this);
-		return this.albumEntities.add(albumEntity);
-	}
-	
-	public Set<InstrumentEntity> getInstrumentEntities() {
-		return instrumentEntities;
-	}
-
-	public void setInstrumentEntities(Set<InstrumentEntity> instrumentEntities) {
-		this.instrumentEntities = instrumentEntities;
-	}
 
 }
