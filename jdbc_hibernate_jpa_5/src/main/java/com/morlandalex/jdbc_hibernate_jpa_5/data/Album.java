@@ -19,6 +19,6 @@ public class Album extends AbstractObject{
 	
 	private String title;
 	private LocalDate releaseDate;
-	private Long singerId;
+	private Singer singerId;
 
 }
