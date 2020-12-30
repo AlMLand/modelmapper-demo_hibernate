@@ -1,6 +1,7 @@
 package com.morlandalex.jdbc_hibernate_jpa_5.serviceJPARepository;
 
 import java.time.LocalDate;
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -14,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.morlandalex.jdbc_hibernate_jpa_5.Mapper.SingerMapper;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Singer;
+import com.morlandalex.jdbc_hibernate_jpa_5.data.SingerSummary;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.SingerEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository.SingerRepository;
 
@@ -66,9 +68,9 @@ public class SingerService {
 		returnedSingerList.forEach(System.out::println);
 		return returnedSingerList;
 	}
-/*	
-	public List<SingerSummary> fetchAllSingerSummary(){
-		List<SingerSummary> returnedSingerSummaryList = ObjectMapperUtils.mapAll(singerRepository.findAllSingerSummary(), SingerSummary.class);
+	
+	public Collection<SingerSummary> fetchAllSingerSummary(){
+		Collection<SingerSummary> returnedSingerSummaryList = ObjectMapperUtils.mapAll(singerRepository.findAllSingerSummary(), SingerSummary.class);
 		returnedSingerSummaryList.forEach(System.out::println);
 		return returnedSingerSummaryList;
 	}
@@ -78,5 +80,5 @@ public class SingerService {
 		System.out.println(returnedSingerSummary);
 		return returnedSingerSummary;
 	}
-*/	
+	
 }
