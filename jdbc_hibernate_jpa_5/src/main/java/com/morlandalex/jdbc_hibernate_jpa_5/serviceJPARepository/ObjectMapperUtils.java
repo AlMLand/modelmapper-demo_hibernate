@@ -7,7 +7,6 @@ import org.modelmapper.ModelMapper;
 import org.modelmapper.config.Configuration.AccessLevel;
 import org.modelmapper.convention.MatchingStrategies;
 
-//@Component("objectMapperUtilsWithModelMapper")
 public class ObjectMapperUtils {
 
 	private static ModelMapper modelMapper;
