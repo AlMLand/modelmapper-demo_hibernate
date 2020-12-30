@@ -69,12 +69,14 @@ public class SingerService {
 		return returnedSingerList;
 	}
 	
+	@Transactional(readOnly = true)
 	public Collection<SingerSummary> fetchAllSingerSummary(){
 		Collection<SingerSummary> returnedSingerSummaryList = ObjectMapperUtils.mapAll(singerRepository.findAllSingerSummary(), SingerSummary.class);
 		returnedSingerSummaryList.forEach(System.out::println);
 		return returnedSingerSummaryList;
 	}
 	
+	@Transactional(readOnly = true)
 	public SingerSummary fetchByIdSingerSummary(Long id) {
 		SingerSummary returnedSingerSummary = ObjectMapperUtils.map(singerRepository.findByIdSingerSummary(id), SingerSummary.class);
 		System.out.println(returnedSingerSummary);
