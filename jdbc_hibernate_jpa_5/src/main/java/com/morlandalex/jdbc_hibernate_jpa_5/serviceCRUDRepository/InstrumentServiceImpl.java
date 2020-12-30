@@ -9,7 +9,7 @@ import com.morlandalex.jdbc_hibernate_jpa_5.data.Instrument;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.InstrumentEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUDRepository.InstrumentRepository;
 import com.morlandalex.jdbc_hibernate_jpa_5.serviceJPARepository.ObjectMapperUtils;
-/*
+
 @Service("instrumentService")
 public class InstrumentServiceImpl implements InstrumentService {
 
@@ -88,4 +88,3 @@ public class InstrumentServiceImpl implements InstrumentService {
 	}
 
 }
-*/
