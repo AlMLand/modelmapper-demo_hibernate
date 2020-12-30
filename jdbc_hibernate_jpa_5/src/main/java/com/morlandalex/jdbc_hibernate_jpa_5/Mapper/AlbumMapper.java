@@ -8,7 +8,7 @@ import com.morlandalex.jdbc_hibernate_jpa_5.data.Album;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.AlbumEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository.SingerRepository;
 
-@Component("albumComponent")
+@Component("albumMapper")
 public class AlbumMapper extends AbstractMapper<Album, AlbumEntity> {
 
 	@Autowired
