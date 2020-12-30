@@ -28,7 +28,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
@@ -38,21 +37,26 @@ import lombok.Setter;
 @Entity
 @Table(name = "singer")
 public class SingerEntity extends AuditableEntity<SingerEntity>{
-	
+
+	@Setter
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "singer_id")
 	private Long id;
 	
+	@Setter
 	@Column(name = "first_name")
 	private String firstName;
 	
+	@Setter
 	@Column(name = "last_name")
 	private String lastName;
 	
+	@Setter
 	@Column(name = "birth_date")
 	private LocalDate birthDate;
 	
+	@Setter
 	@Version
 	@Column(name = "singer_version")
 	private int version;
@@ -60,6 +64,7 @@ public class SingerEntity extends AuditableEntity<SingerEntity>{
 	@OneToMany(mappedBy = "singerId", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<AlbumEntity> albums;
 	
+	@Setter
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "singer_instrument", 
 			joinColumns = @JoinColumn(name = "singer_id"), 
@@ -71,6 +76,11 @@ public class SingerEntity extends AuditableEntity<SingerEntity>{
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthDate = birthDate;
+	}
+
+	public void setAlbums(List<AlbumEntity> albums) {
+		albums.forEach(album -> album.setSingerId(this));
+		this.albums = albums;
 	}
 
 }
