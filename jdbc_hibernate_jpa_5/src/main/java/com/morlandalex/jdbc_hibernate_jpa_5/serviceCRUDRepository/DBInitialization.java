@@ -21,25 +21,25 @@ public class DBInitialization {
 	@PostConstruct
 	public void dbInitialization() {
 		singerService.save(Singer.builder()
-				.firstName("Alex")
-				.lastName("Morland")
-				.birthDate(LocalDate.of(1985, 6, 5))
+				.firstName("Khabib")
+				.lastName("Nurmagomedov")
+				.birthDate(LocalDate.of(1988, 9, 20))
 				.album(Album.builder().title("A_A_A_A").releaseDate(LocalDate.of(2000, 10, 23)).build())
 				.instrument(Instrument.builder().instrument("Guitar").build())
 				.build());
 
 		singerService.save(Singer.builder()
-				.firstName("Elvira")
-				.lastName("Morland")
-				.birthDate(LocalDate.of(1986, 9, 16))
+				.firstName("Conor")
+				.lastName("McGregor")
+				.birthDate(LocalDate.of(1988, 7, 14))
 				.album(Album.builder().title("B_B_B_B").releaseDate(LocalDate.of(1995, 1, 28)).build())
 				.instrument(Instrument.builder().instrument("Bassguitar").build())
 				.build());
 		
 		singerService.save(Singer.builder()
-				.firstName("Timur")
-				.lastName("Morland")
-				.birthDate(LocalDate.of(2017, 8, 7))
+				.firstName("Dustin")
+				.lastName("Poirier")
+				.birthDate(LocalDate.of(1989, 1, 19))
 				.album(Album.builder().title("C_C_C_C").releaseDate(LocalDate.of(2018, 10, 12)).build())
 				.album(Album.builder().title("D_D_D_D").releaseDate(LocalDate.of(2019, 7, 11)).build())
 				.instrument(Instrument.builder().instrument("Voice").build())
