@@ -12,12 +12,18 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Getter
 @Setter
+@Getter
 @MappedSuperclass
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 public abstract class AuditableEntity<T> {
 
 	@CreatedBy

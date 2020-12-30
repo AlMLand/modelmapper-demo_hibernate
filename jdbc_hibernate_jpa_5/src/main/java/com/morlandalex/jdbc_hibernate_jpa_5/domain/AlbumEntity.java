@@ -17,17 +17,17 @@ import org.hibernate.envers.AuditOverride;
 import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString(exclude = {"version","singerEntity"})
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@RequiredArgsConstructor
 @Audited
 @AuditOverride(forClass = AuditableEntity.class)
 @EntityListeners(AuditingEntityListener.class)
@@ -52,6 +52,19 @@ public class AlbumEntity extends AuditableEntity<AlbumEntity>{
 	
 	@ManyToOne
 	@JoinColumn(name = "singer_id")
-	private SingerEntity singerEntity;
+	private SingerEntity singerId;
+
+	public AlbumEntity(String title, LocalDate releaseDate) {
+		super();
+		this.title = title;
+		this.releaseDate = releaseDate;
+	}
+
+	public AlbumEntity(String title, LocalDate releaseDate, SingerEntity singerId) {
+		super();
+		this.title = title;
+		this.releaseDate = releaseDate;
+		this.singerId = singerId;
+	}
 
 }

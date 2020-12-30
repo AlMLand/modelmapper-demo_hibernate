@@ -1,7 +1,7 @@
 package com.morlandalex.jdbc_hibernate_jpa_5.domain;
 
 import java.time.LocalDate;
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -21,17 +21,17 @@ import org.hibernate.envers.AuditOverride;
 import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString(exclude = {"version","albumEntities","instrumentEntities"})
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@RequiredArgsConstructor
 @Audited
 @EntityListeners(AuditingEntityListener.class)
 @AuditOverride(forClass = AuditableEntity.class)
@@ -57,13 +57,20 @@ public class SingerEntity extends AuditableEntity<SingerEntity>{
 	@Column(name = "singer_version")
 	private int version;
 	
-	@OneToMany(mappedBy = "singerEntity", cascade = CascadeType.ALL, orphanRemoval = true)
-	private Set<AlbumEntity> albumEntities;
+	@OneToMany(mappedBy = "singerId", cascade = CascadeType.ALL, orphanRemoval = true)
+	private List<AlbumEntity> albums;
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "singer_instrument", 
 			joinColumns = @JoinColumn(name = "singer_id"), 
 			inverseJoinColumns = @JoinColumn(name = "instrument_id"))		
-	private Set<InstrumentEntity> instrumentEntities;
+	private List<InstrumentEntity> instruments;
+
+	public SingerEntity(String firstName, String lastName, LocalDate birthDate) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthDate = birthDate;
+	}
 
 }

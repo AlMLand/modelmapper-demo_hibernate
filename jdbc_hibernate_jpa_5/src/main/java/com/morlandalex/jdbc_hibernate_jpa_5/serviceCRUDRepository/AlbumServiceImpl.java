@@ -9,7 +9,7 @@ import com.morlandalex.jdbc_hibernate_jpa_5.data.Album;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.AlbumEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUDRepository.AlbumRepository;
 import com.morlandalex.jdbc_hibernate_jpa_5.serviceJPARepository.ObjectMapperUtils;
-
+/*
 @Service("albumService")
 public class AlbumServiceImpl implements AlbumService {
 
@@ -87,3 +87,4 @@ public class AlbumServiceImpl implements AlbumService {
 	}
 
 }
+*/

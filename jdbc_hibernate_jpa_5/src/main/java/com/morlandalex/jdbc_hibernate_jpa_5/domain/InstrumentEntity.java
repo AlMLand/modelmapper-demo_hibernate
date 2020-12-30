@@ -1,6 +1,6 @@
 package com.morlandalex.jdbc_hibernate_jpa_5.domain;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,17 +17,17 @@ import org.hibernate.envers.AuditOverride;
 import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
-@Getter
 @Setter
-@ToString(exclude = {"singerEntities"})
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-@RequiredArgsConstructor
 @Audited
 @AuditOverride(forClass = AuditableEntity.class)
 @EntityListeners(AuditingEntityListener.class)
@@ -47,6 +47,11 @@ public class InstrumentEntity extends AuditableEntity<InstrumentEntity>{
 	@JoinTable(name = "singer_instrument", 
 				joinColumns = @JoinColumn(name = "instrument_id"), 
 				inverseJoinColumns = @JoinColumn(name = "singer_id"))
-	private Set<SingerEntity> singerEntities;
+	private List<SingerEntity> singers;
+
+	public InstrumentEntity(String instrument) {
+		super();
+		this.instrument = instrument;
+	}
 
 }

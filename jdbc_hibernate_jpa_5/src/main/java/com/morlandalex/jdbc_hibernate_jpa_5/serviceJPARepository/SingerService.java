@@ -12,8 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.morlandalex.jdbc_hibernate_jpa_5.Mapper.SingerMapper;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Singer;
-import com.morlandalex.jdbc_hibernate_jpa_5.data.SingerSummary;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.SingerEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository.SingerRepository;
 
@@ -22,47 +22,51 @@ public class SingerService {
 
 	@Autowired
 	private SingerRepository singerRepository;
+	@Autowired
+	private SingerMapper singerMapper;
 	@PersistenceContext
 	private EntityManager entityManager;
 	
 	@Transactional(readOnly = true)
 	public Singer fetchAuditByRevision(Long id, int revision) {
 		AuditReader auditReader = AuditReaderFactory.get(entityManager);
-		Singer returnedSinger = ObjectMapperUtils.map(auditReader.find(SingerEntity.class, id, revision), Singer.class);
+		Singer returnedSinger = singerMapper.toObject(auditReader.find(SingerEntity.class, id, revision));
 		System.out.println(returnedSinger);
 		return returnedSinger;
 	}
 	
+	@Transactional(readOnly = true)
 	public List<Singer> fetchAll(){
-		List<Singer> returnedSingerList = ObjectMapperUtils.mapAll(singerRepository.findAll(), Singer.class);
+		List<Singer> returnedSingerList = singerMapper.toObjectList(singerRepository.findAll());
 		returnedSingerList.forEach(System.out::println);
 		return returnedSingerList;
 	}
 	
+	@Transactional(readOnly = true)
 	public List<Singer> fetchByLastName(String lastName){
-		List<Singer> returnedList = ObjectMapperUtils.mapAll(singerRepository.findByLastNameIgnoreCaseOrderByFirstName(lastName), Singer.class);
+		List<Singer> returnedList = singerMapper.toObjectList(singerRepository.findByLastNameIgnoreCaseOrderByFirstName(lastName));
 		returnedList.forEach(System.out::println);
 		return returnedList;
 	}
 
-	@Transactional
 	public Singer save(Singer singer) {
-		singerRepository.save(ObjectMapperUtils.map(singer, SingerEntity.class));
+		singerRepository.save(singerMapper.toEntity(singer));
 		return singer;
 	}
 	@Transactional(readOnly = true)
 	public Singer fetchById(Long id) {
-		Singer returnedSinger = ObjectMapperUtils.map(singerRepository.getOne(id), Singer.class);
+		Singer returnedSinger = singerMapper.toObject(singerRepository.getOne(id));
 		System.out.println(returnedSinger);
 		return returnedSinger;
 	}
 	
+	@Transactional(readOnly = true)
 	public List<Singer> fetchByBirthDate(LocalDate date){
-		List<Singer> returnedSingerList = ObjectMapperUtils.mapAll(singerRepository.findByBirthDate(date), Singer.class);
+		List<Singer> returnedSingerList = singerMapper.toObjectList(singerRepository.findByBirthDate(date));
 		returnedSingerList.forEach(System.out::println);
 		return returnedSingerList;
 	}
-	
+/*	
 	public List<SingerSummary> fetchAllSingerSummary(){
 		List<SingerSummary> returnedSingerSummaryList = ObjectMapperUtils.mapAll(singerRepository.findAllSingerSummary(), SingerSummary.class);
 		returnedSingerSummaryList.forEach(System.out::println);
@@ -74,5 +78,5 @@ public class SingerService {
 		System.out.println(returnedSingerSummary);
 		return returnedSingerSummary;
 	}
-	
+*/	
 }

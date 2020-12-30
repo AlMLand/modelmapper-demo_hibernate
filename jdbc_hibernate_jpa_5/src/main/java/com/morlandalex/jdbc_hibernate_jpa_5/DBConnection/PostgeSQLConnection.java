@@ -5,6 +5,9 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.config.Configuration.AccessLevel;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -30,6 +33,17 @@ public class PostgeSQLConnection {
 
 	@Autowired
 	private Environment environment;
+	
+	@Bean
+	public ModelMapper modelMapper() {
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration()
+		.setMatchingStrategy(MatchingStrategies.STRICT)
+		.setFieldMatchingEnabled(true)
+		.setSkipNullEnabled(true)
+		.setFieldAccessLevel(AccessLevel.PRIVATE);
+		return modelMapper;
+	}
 	
 	@Bean
 	public DataSource dataSource() {

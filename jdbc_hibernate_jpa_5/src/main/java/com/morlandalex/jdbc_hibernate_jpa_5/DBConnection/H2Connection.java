@@ -5,6 +5,9 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.modelmapper.ModelMapper;
+import org.modelmapper.config.Configuration.AccessLevel;
+import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -24,13 +27,24 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @PropertySource("classpath:appConfig.properties")
 @Configuration
 @ComponentScan(basePackages = "com.morlandalex.jdbc_hibernate_jpa_5")
-@EnableJpaRepositories(basePackages = "com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository") //sozdaet componenti repositorija samo, esli ukazat gde oni
+@EnableJpaRepositories(basePackages = "com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository")
 @EnableTransactionManagement
 @EnableJpaAuditing(auditorAwareRef = "auditorAwareBean")
 public class H2Connection {
 
 	@Autowired
 	private Environment environment;
+	
+	@Bean
+	public ModelMapper modelMapper() {
+		ModelMapper modelMapper = new ModelMapper();
+		modelMapper.getConfiguration()
+		.setMatchingStrategy(MatchingStrategies.STRICT)
+		.setFieldMatchingEnabled(true)
+		.setSkipNullEnabled(true)
+		.setFieldAccessLevel(AccessLevel.PRIVATE);
+		return modelMapper;
+	}
 	
 	@Bean
 	public DataSource dataSource() {

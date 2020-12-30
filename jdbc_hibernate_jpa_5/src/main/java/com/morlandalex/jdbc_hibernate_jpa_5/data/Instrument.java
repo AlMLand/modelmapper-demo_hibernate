@@ -1,33 +1,23 @@
 package com.morlandalex.jdbc_hibernate_jpa_5.data;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Set;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.Singular;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Getter
-@Setter
+@Data
 @Builder
-@ToString(exclude = {"singers"})
+@ToString(callSuper = true, exclude = {"singers"})
+@NoArgsConstructor
 @AllArgsConstructor
-@RequiredArgsConstructor
-public class Instrument {
+@EqualsAndHashCode(callSuper = true)
+public class Instrument extends AbstractObject{
 
-	private Long id;
 	private String instrument;
-	private String createdBy;
-	private LocalDate createdDate;
-	private LocalDateTime createdDateTime;
-	private String lastModifiedBy;
-	private LocalDate lastModifiedDate;
-	@Singular
-	private Set<Singer> singers;
+	private List<Singer> singers;
 
 }
