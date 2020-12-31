@@ -19,6 +19,10 @@ public class ObjectMapperUtils {
 		.setFieldAccessLevel(AccessLevel.PRIVATE);
 	}
 	
+	private ObjectMapperUtils() {
+		
+	}
+	
 	/**
 	 * One Singer entity(from ... .domain.Singer package) to Singer(from ...
 	 * .data.Singer package) and reversed.
