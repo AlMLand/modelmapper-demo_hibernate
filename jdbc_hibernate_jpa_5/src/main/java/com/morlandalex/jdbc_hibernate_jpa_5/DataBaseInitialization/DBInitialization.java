@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.serviceCRUDRepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.DataBaseInitialization;
 
 import java.time.LocalDate;
 
