@@ -1,4 +1,4 @@
-package StaticMapper;
+package com.morlandalex.jdbc_hibernate_jpa_5.StaticMapper;
 
 import java.util.Collection;
 import java.util.stream.Collectors;

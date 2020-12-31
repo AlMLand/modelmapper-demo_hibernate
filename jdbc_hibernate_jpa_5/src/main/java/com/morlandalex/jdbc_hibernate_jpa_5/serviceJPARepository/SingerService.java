@@ -14,12 +14,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.morlandalex.jdbc_hibernate_jpa_5.Mapper.SingerMapper;
+import com.morlandalex.jdbc_hibernate_jpa_5.StaticMapper.ObjectMapperUtils;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Singer;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.SingerSummary;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.SingerEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository.SingerRepository;
-
-import StaticMapper.ObjectMapperUtils;
 
 @Service("singerServiceJPA")
 public class SingerService {

@@ -5,11 +5,10 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.morlandalex.jdbc_hibernate_jpa_5.StaticMapper.ObjectMapperUtils;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Album;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.AlbumEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUDRepository.AlbumRepository;
-
-import StaticMapper.ObjectMapperUtils;
 
 @Service("albumService")
 public class AlbumServiceImpl implements AlbumService {
