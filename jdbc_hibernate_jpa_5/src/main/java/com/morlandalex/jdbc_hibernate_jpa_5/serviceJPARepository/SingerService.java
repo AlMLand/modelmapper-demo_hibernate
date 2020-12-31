@@ -19,6 +19,8 @@ import com.morlandalex.jdbc_hibernate_jpa_5.data.SingerSummary;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.SingerEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository.SingerRepository;
 
+import StaticMapper.ObjectMapperUtils;
+
 @Service("singerServiceJPA")
 public class SingerService {
 

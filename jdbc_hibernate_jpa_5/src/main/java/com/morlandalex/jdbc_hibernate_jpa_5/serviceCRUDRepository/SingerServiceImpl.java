@@ -9,7 +9,8 @@ import org.springframework.stereotype.Service;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Singer;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.SingerEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUDRepository.SingerRepository;
-import com.morlandalex.jdbc_hibernate_jpa_5.serviceJPARepository.ObjectMapperUtils;
+
+import StaticMapper.ObjectMapperUtils;
 
 @Service("singerService")
 public class SingerServiceImpl implements SingerService {
