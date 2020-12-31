@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.serviceJPArepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.service;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Instrument;
 import com.morlandalex.jdbc_hibernate_jpa_5.mapper.InstrumentMapper;
-import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPArepository.InstrumentRepository;
+import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.repository.InstrumentRepository;
 
 @Service("instrumentServiceJPA")
 public class InstrumentService {

@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.serviceJPArepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.service;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Album;
 import com.morlandalex.jdbc_hibernate_jpa_5.mapper.AlbumMapper;
-import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPArepository.AlbumRepository;
+import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.repository.AlbumRepository;
 
 @Service("albumServiceJPA")
 public class AlbumService {

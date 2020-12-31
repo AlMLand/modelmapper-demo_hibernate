@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.serviceJPArepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.service;
 
 import java.time.LocalDate;
 import java.util.Collection;
@@ -17,7 +17,7 @@ import com.morlandalex.jdbc_hibernate_jpa_5.data.Singer;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.SingerSummary;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.SingerEntity;
 import com.morlandalex.jdbc_hibernate_jpa_5.mapper.SingerMapper;
-import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPArepository.SingerRepository;
+import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.repository.SingerRepository;
 import com.morlandalex.jdbc_hibernate_jpa_5.staticmapper.ObjectMapperUtils;
 
 @Service("singerServiceJPA")

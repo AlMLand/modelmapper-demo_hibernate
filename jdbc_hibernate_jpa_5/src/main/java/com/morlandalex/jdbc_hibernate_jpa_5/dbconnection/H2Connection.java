@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @PropertySource("classpath:appConfig.properties")
 @Configuration
 @ComponentScan(basePackages = "com.morlandalex.jdbc_hibernate_jpa_5")
-@EnableJpaRepositories(basePackages = "com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository")
+@EnableJpaRepositories(basePackages = "com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.repository")
 @EnableTransactionManagement
 @EnableJpaAuditing(auditorAwareRef = "auditorAwareBean")
 public class H2Connection {

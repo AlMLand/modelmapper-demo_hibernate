@@ -26,7 +26,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages = "com.morlandalex.jdbc_hibernate_jpa_5")
 @PropertySource("classpath:appConfig.properties")
 @EnableTransactionManagement
-@EnableJpaRepositories("com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPARepository")
+@EnableJpaRepositories("com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.repository")
 @EnableJpaAuditing(auditorAwareRef = "auditorAwareBean")
 @Configuration
 public class PostgeSQLConnection {

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Album;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Instrument;
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Singer;
-import com.morlandalex.jdbc_hibernate_jpa_5.serviceJPArepository.SingerService;
+import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.service.SingerService;
 
 @Service("dbInitialization")
 public class DBInitialization {

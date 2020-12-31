@@ -4,7 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.GenericApplicationContext;
 
 import com.morlandalex.jdbc_hibernate_jpa_5.dbconnection.H2Connection;
-import com.morlandalex.jdbc_hibernate_jpa_5.serviceJPArepository.SingerService;
+import com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.service.SingerService;
 
 public class DemoRunFile {
 

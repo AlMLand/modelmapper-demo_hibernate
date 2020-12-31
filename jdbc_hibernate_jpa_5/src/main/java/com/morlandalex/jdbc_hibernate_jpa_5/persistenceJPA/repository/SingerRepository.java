@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPArepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceJPA.repository;
 
 import java.time.LocalDate;
 import java.util.List;
