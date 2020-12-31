@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.serviceCRUDrepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUD.service;
 
 import java.util.Collection;
 
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Instrument;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.InstrumentEntity;
-import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUDrepository.InstrumentRepository;
+import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUD.repository.InstrumentRepository;
 import com.morlandalex.jdbc_hibernate_jpa_5.staticmapper.ObjectMapperUtils;
 
 @Service("instrumentService")

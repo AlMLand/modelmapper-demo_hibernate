@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUDrepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUD.repository;
 
 import java.util.Collection;
 

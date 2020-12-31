@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.serviceCRUDrepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUD.service;
 
 import java.time.LocalDate;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package com.morlandalex.jdbc_hibernate_jpa_5.serviceCRUDrepository;
+package com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUD.service;
 
 import java.time.LocalDate;
 import java.util.Collection;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.morlandalex.jdbc_hibernate_jpa_5.data.Singer;
 import com.morlandalex.jdbc_hibernate_jpa_5.domain.SingerEntity;
-import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUDrepository.SingerRepository;
+import com.morlandalex.jdbc_hibernate_jpa_5.persistenceCRUD.repository.SingerRepository;
 import com.morlandalex.jdbc_hibernate_jpa_5.staticmapper.ObjectMapperUtils;
 
 @Service("singerService")
