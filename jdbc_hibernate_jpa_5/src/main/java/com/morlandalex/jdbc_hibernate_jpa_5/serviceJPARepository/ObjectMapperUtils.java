@@ -9,13 +9,16 @@ import org.modelmapper.convention.MatchingStrategies;
 
 public class ObjectMapperUtils {
 
-	private static ModelMapper modelMapper;
+	private static ModelMapper modelMapper = new ModelMapper();
 
 	static {
-		modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT).setFieldMatchingEnabled(true)
-				.setSkipNullEnabled(true).setFieldAccessLevel(AccessLevel.PRIVATE);
+		modelMapper.getConfiguration()
+		.setMatchingStrategy(MatchingStrategies.STRICT)
+		.setFieldMatchingEnabled(true)
+		.setSkipNullEnabled(true)
+		.setFieldAccessLevel(AccessLevel.PRIVATE);
 	}
-
+	
 	/**
 	 * One Singer entity(from ... .domain.Singer package) to Singer(from ...
 	 * .data.Singer package) and reversed.
@@ -23,8 +26,8 @@ public class ObjectMapperUtils {
 	 * @param <T> source type
 	 * @param <D> destination type
 	 */
-	public static <T, D> D map(final T entity, Class<D> destinationType) {
-		return modelMapper.map(entity, destinationType);
+	public static <T, D> D map(final T source, Class<D> destination) {
+		return modelMapper.map(source, destination);
 	}
 
 	/**
@@ -34,8 +37,8 @@ public class ObjectMapperUtils {
 	 * @param <T> source type
 	 * @param <D> destination type
 	 */
-	public static <T, D> Collection<D> mapAll(final Collection<T> entityList, Class<D> destinationType) {
-		return entityList.stream().map(entity -> map(entity, destinationType)).collect(Collectors.toList());
+	public static <T, D> Collection<D> mapAll(final Collection<T> sourceList, Class<D> destination) {
+		return sourceList.stream().map(source -> map(source, destination)).collect(Collectors.toList());
 	}
 
 }
