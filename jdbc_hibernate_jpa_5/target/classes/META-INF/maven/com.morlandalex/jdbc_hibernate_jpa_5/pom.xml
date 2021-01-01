@@ -67,7 +67,7 @@
 			<version>${hibernate.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- contains: @Entity i vse ostalnij s etim svjasannie, -->
+		<!-- contains: @Entity... -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
