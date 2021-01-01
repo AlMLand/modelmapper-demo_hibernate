@@ -232,7 +232,7 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_5Y_E4EMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.navigator.resources.ProjectExplorer"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.navigator.resources"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1608506438728&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <tags>active</tags>
@@ -364,7 +364,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5EUccEMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5EwhUEMZEeuYDb6DyXCn1w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_3yrOe0MZEeuYDb6DyXCn1w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_sq-fdkxUEeubKrMM0IXAlQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_3yrOe0MZEeuYDb6DyXCn1w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5EUccUMZEeuYDb6DyXCn1w" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -407,7 +407,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5EajEEMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5E1Z0kMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_3ylv6kMZEeuYDb6DyXCn1w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_srHpaExUEeubKrMM0IXAlQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_3ylv6kMZEeuYDb6DyXCn1w"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5EajEUMZEeuYDb6DyXCn1w" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -450,35 +450,7 @@
     <trimBars xmi:id="_3wWTKUMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.platform" side="Right"/>
   </children>
   <handlers xmi:id="_ioC8wF4xEea8x7AIe1PlrQ" elementId="com.florianingerl.regexfindandreplace.handler.openfindreplacedialog" contributorURI="platform:/plugin/com.florianingerl.regexfindandreplace.plugin" contributionURI="bundleclass://com.florianingerl.regexfindandreplace.plugin/com.florianingerl.regexfindandreplace.handlers.OpenFindReplaceDialogE4Handler" command="_XcrQgF4xEea8x7AIe1PlrQ"/>
-  <bindingTables xmi:id="_3wWTKkMZEeuYDb6DyXCn1w" contributorURI="platform:/plugin/org.eclipse.platform" bindingContext="_3wWTK0MZEeuYDb6DyXCn1w">
-    <bindings xmi:id="_3z9Aw0MZEeuYDb6DyXCn1w" keySequence="CTRL+1" command="_3yg2VEMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_3z9n-UMZEeuYDb6DyXCn1w" keySequence="CTRL+SHIFT+I" command="_3yfoMkMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_3z9oBUMZEeuYDb6DyXCn1w" keySequence="CTRL+SHIFT+L" command="_3yr1nkMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30DHY0MZEeuYDb6DyXCn1w" keySequence="CTRL+SPACE" command="_3ylwDUMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30DHdEMZEeuYDb6DyXCn1w" keySequence="CTRL+SHIFT+D" command="_3yr10EMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30JOB0MZEeuYDb6DyXCn1w" keySequence="CTRL+V" command="_3yav2UMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30JOJkMZEeuYDb6DyXCn1w" keySequence="CTRL+SHIFT+SPACE" command="_3yg2gEMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30JOKUMZEeuYDb6DyXCn1w" keySequence="CTRL+A" command="_3yg3GUMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30JON0MZEeuYDb6DyXCn1w" keySequence="CTRL+C" command="_3ylu90MZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30UNIkMZEeuYDb6DyXCn1w" keySequence="CTRL+X" command="_3yg2rUMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30UNI0MZEeuYDb6DyXCn1w" keySequence="CTRL+Y" command="_3yg3TkMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30UNJkMZEeuYDb6DyXCn1w" keySequence="CTRL+Z" command="_3yg2pEMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30UNPEMZEeuYDb6DyXCn1w" keySequence="ALT+PAGE_UP" command="_3yg3X0MZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30UNPkMZEeuYDb6DyXCn1w" keySequence="ALT+PAGE_DOWN" command="_3ylvp0MZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30UNQkMZEeuYDb6DyXCn1w" keySequence="SHIFT+INSERT" command="_3yav2UMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30UNSUMZEeuYDb6DyXCn1w" keySequence="ALT+F11" command="_3yawOkMZEeuYDb6DyXCn1w">
-      <tags>platform:win32</tags>
-    </bindings>
-    <bindings xmi:id="_30a64UMZEeuYDb6DyXCn1w" keySequence="CTRL+F10" command="_3yawB0MZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30dXEEMZEeuYDb6DyXCn1w" keySequence="CTRL+INSERT" command="_3ylu90MZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30dXIEMZEeuYDb6DyXCn1w" keySequence="CTRL+PAGE_UP" command="_3yr1dkMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30dXIUMZEeuYDb6DyXCn1w" keySequence="CTRL+PAGE_DOWN" command="_3yg2WkMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30d-IUMZEeuYDb6DyXCn1w" keySequence="ALT+SHIFT+F1" command="_3yawUUMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30d-IkMZEeuYDb6DyXCn1w" keySequence="ALT+SHIFT+F2" command="_3ylvg0MZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30d-I0MZEeuYDb6DyXCn1w" keySequence="ALT+SHIFT+F3" command="_3yrOhkMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30d-KUMZEeuYDb6DyXCn1w" keySequence="SHIFT+DEL" command="_3yg2rUMZEeuYDb6DyXCn1w"/>
-    <bindings xmi:id="_30d-PkMZEeuYDb6DyXCn1w" keySequence="ALT+CTRL+SHIFT+F9" command="_3yg3EUMZEeuYDb6DyXCn1w"/>
-  </bindingTables>
+  <bindingTables xmi:id="_3wWTKkMZEeuYDb6DyXCn1w" contributorURI="platform:/plugin/org.eclipse.platform" bindingContext="_3wWTK0MZEeuYDb6DyXCn1w"/>
   <bindingTables xmi:id="_3zftwEMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.textEditorScope" bindingContext="_3y20kkMZEeuYDb6DyXCn1w">
     <bindings xmi:id="_3z4vUEMZEeuYDb6DyXCn1w" keySequence="CTRL+SHIFT+CR" command="_3yrOhUMZEeuYDb6DyXCn1w"/>
     <bindings xmi:id="_3z4vU0MZEeuYDb6DyXCn1w" keySequence="CTRL+BS" command="_3yaIokMZEeuYDb6DyXCn1w"/>
@@ -1014,7 +986,9 @@
     <bindings xmi:id="_30d-WEMZEeuYDb6DyXCn1w" keySequence="ALT+N" command="_3ylvBkMZEeuYDb6DyXCn1w"/>
   </bindingTables>
   <bindingTables xmi:id="_2seTgF8lEea2fbkyfFHzhA" elementId="com.florianingerl.regexfindandreplace.bindingtable.0" contributorURI="platform:/plugin/com.florianingerl.regexfindandreplace.plugin" bindingContext="_3wWTK0MZEeuYDb6DyXCn1w">
-    <bindings xmi:id="_3ySFAF8lEea2fbkyfFHzhA" elementId="com.florianingerl.regexfindandreplace.keybinding.0" contributorURI="platform:/plugin/com.florianingerl.regexfindandreplace.plugin" keySequence="M1+F5" command="_XcrQgF4xEea8x7AIe1PlrQ"/>
+    <bindings xmi:id="_3ySFAF8lEea2fbkyfFHzhA" elementId="com.florianingerl.regexfindandreplace.keybinding.0" contributorURI="platform:/plugin/com.florianingerl.regexfindandreplace.plugin" keySequence="M1+F5">
+      <command href="platform:/plugin/com.florianingerl.regexfindandreplace.plugin/fragment.e4xmi#_XcrQgF4xEea8x7AIe1PlrQ"/>
+    </bindings>
   </bindingTables>
   <bindingTables xmi:id="_5YZ2EUMZEeuYDb6DyXCn1w" bindingContext="_5YZ2EEMZEeuYDb6DyXCn1w"/>
   <bindingTables xmi:id="_5YZ2E0MZEeuYDb6DyXCn1w" bindingContext="_5YZ2EkMZEeuYDb6DyXCn1w"/>
@@ -3341,7 +3315,7 @@
   <addons xmi:id="_3wWTN0MZEeuYDb6DyXCn1w" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_3wWTOEMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_3wxJ4EMZEeuYDb6DyXCn1w" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_sANEIExUEeubKrMM0IXAlQ" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_3yRlwEMZEeuYDb6DyXCn1w" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_3yRlwUMZEeuYDb6DyXCn1w" elementId="org.eclipse.wb.core.actions.category" name="WindowBuilder Pro" description="WindowBuilder Pro actions"/>
